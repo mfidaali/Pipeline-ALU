@@ -1,0 +1,18 @@
+Fitter Status : Successful - Sat Nov 03 18:33:09 2018
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : pipemult
+Top-level Entity Name : pipemult
+Family : MAX 10
+Device : 10M08DAF484C8GES
+Timing Models : Preliminary
+Total logic elements : 651 / 8,064 ( 8 % )
+    Total combinational functions : 481 / 8,064 ( 6 % )
+    Dedicated logic registers : 352 / 8,064 ( 4 % )
+Total registers : 375
+Total pins : 167 / 250 ( 67 % )
+Total virtual pins : 0
+Total memory bits : 512 / 387,072 ( < 1 % )
+Embedded Multiplier 9-bit elements : 1 / 48 ( 2 % )
+Total PLLs : 0 / 2 ( 0 % )
+UFM blocks : 0 / 1 ( 0 % )
+ADC blocks : 0 / 1 ( 0 % )

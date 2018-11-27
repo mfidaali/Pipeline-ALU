@@ -1,0 +1,397 @@
+Power Analyzer report for pipemult
+Sat Nov 03 18:33:32 2018
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Parallel Compilation
+  3. Power Analyzer Summary
+  4. Power Analyzer Settings
+  5. Indeterminate Toggle Rates
+  6. Operating Conditions Used
+  7. Thermal Power Dissipation by Block
+  8. Thermal Power Dissipation by Block Type
+  9. Thermal Power Dissipation by Hierarchy
+ 10. Core Dynamic Thermal Power Dissipation by Clock Domain
+ 11. Current Drawn from Voltage Supplies Summary
+ 12. VCCIO Supply Current Drawn by I/O Bank
+ 13. VCCIO Supply Current Drawn by Voltage
+ 14. Confidence Metric Details
+ 15. Signal Activities
+ 16. Power Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.25        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   8.2%      ;
++----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------+
+; Power Analyzer Summary                                                                    ;
++----------------------------------------+--------------------------------------------------+
+; Power Analyzer Status                  ; Successful - Sat Nov 03 18:33:32 2018            ;
+; Quartus Prime Version                  ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition      ;
+; Revision Name                          ; pipemult                                         ;
+; Top-level Entity Name                  ; pipemult                                         ;
+; Family                                 ; MAX 10                                           ;
+; Device                                 ; 10M08DAF484C8GES                                 ;
+; Power Models                           ; Final                                            ;
+; Total Thermal Power Dissipation        ; 125.16 mW                                        ;
+; Core Dynamic Thermal Power Dissipation ; 21.57 mW                                         ;
+; Core Static Thermal Power Dissipation  ; 39.82 mW                                         ;
+; I/O Thermal Power Dissipation          ; 63.77 mW                                         ;
+; Power Estimation Confidence            ; Low: user provided insufficient toggle rate data ;
++----------------------------------------+--------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Power Analyzer Settings                                                                                                  ;
++------------------------------------------------------------------+---------------------------------------+---------------+
+; Option                                                           ; Setting                               ; Default Value ;
++------------------------------------------------------------------+---------------------------------------+---------------+
+; Use smart compilation                                            ; Off                                   ; Off           ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                                    ; On            ;
+; Enable compact report table                                      ; Off                                   ; Off           ;
+; Default Power Input I/O Toggle Rate                              ; 12.5%                                 ; 12.5%         ;
+; Preset Cooling Solution                                          ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW ;               ;
+; Board thermal model                                              ; None (CONSERVATIVE)                   ;               ;
+; Default Power Toggle Rate                                        ; 12.5%                                 ; 12.5%         ;
+; Use vectorless estimation                                        ; On                                    ; On            ;
+; Use Input Files                                                  ; Off                                   ; Off           ;
+; Filter Glitches in VCD File Reader                               ; On                                    ; On            ;
+; Power Analyzer Report Signal Activity                            ; Off                                   ; Off           ;
+; Power Analyzer Report Power Dissipation                          ; Off                                   ; Off           ;
+; Device Power Characteristics                                     ; TYPICAL                               ; TYPICAL       ;
+; Automatically Compute Junction Temperature                       ; On                                    ; On            ;
+; Specified Junction Temperature                                   ; 25                                    ; 25            ;
+; Ambient Temperature                                              ; 25                                    ; 25            ;
+; Use Custom Cooling Solution                                      ; Off                                   ; Off           ;
+; Board Temperature                                                ; 25                                    ; 25            ;
++------------------------------------------------------------------+---------------------------------------+---------------+
+
+
++-------------------------------------+
+; Indeterminate Toggle Rates          ;
++-------+-----------------------------+
+; Node  ; Reason                      ;
++-------+-----------------------------+
+; reset ; No valid clock domain found ;
++-------+-----------------------------+
+
+
++--------------------------------------------------------------------------+
+; Operating Conditions Used                                                ;
++---------------------------------------------+----------------------------+
+; Setting                                     ; Value                      ;
++---------------------------------------------+----------------------------+
+; Device power characteristics                ; Typical                    ;
+;                                             ;                            ;
+; Voltages                                    ;                            ;
+;     VCC                                     ; 1.20 V                     ;
+;     VCCA                                    ; 2.50 V                     ;
+;     VCCD_PLL                                ; 1.20 V                     ;
+;     VCCINT                                  ; 1.20 V                     ;
+;     VCCA_ADC                                ; 2.50 V                     ;
+;     3.3-V LVTTL I/O Standard                ; 3.3 V                      ;
+;     3.3-V LVCMOS I/O Standard               ; 3.3 V                      ;
+;     2.5 V I/O Standard                      ; 2.5 V                      ;
+;     3.3 V Schmitt Trigger I/O Standard      ; 3.3 V                      ;
+;     2.5 V Schmitt Trigger I/O Standard      ; 2.5 V                      ;
+;                                             ;                            ;
+; Auto computed junction temperature          ; 26.9 degrees Celsius       ;
+;     Ambient temperature                     ; 25.0 degrees Celsius       ;
+;     Junction-to-Case thermal resistance     ; 11.20 degrees Celsius/Watt ;
+;     Case-to-Heat Sink thermal resistance    ; 0.10 degrees Celsius/Watt  ;
+;     Heat Sink-to-Ambient thermal resistance ; 3.50 degrees Celsius/Watt  ;
+;                                             ;                            ;
+; Board model used                            ; None                       ;
++---------------------------------------------+----------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Thermal Power Dissipation by Block                                                                                                           ;
++------------+------------+---------------------+-----------------------------+--------------------------------+-------------------------------+
+; Block Name ; Block Type ; Total Thermal Power ; Block Thermal Dynamic Power ; Block Thermal Static Power (1) ; Routing Thermal Dynamic Power ;
++------------+------------+---------------------+-----------------------------+--------------------------------+-------------------------------+
+(1) The "Thermal Power Dissipation by Block" Table has been hidden. To show this table, please select the "Write power dissipation by block to report file" option under "PowerPlay Power Analyzer Settings".
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Thermal Power Dissipation by Block Type                                                                                                                                                                                   ;
++----------------------------+-----------------------------------+-----------------------------+--------------------------------+-------------------------------+-----------------------------------------------------------+
+; Block Type                 ; Total Thermal Power by Block Type ; Block Thermal Dynamic Power ; Block Thermal Static Power (1) ; Routing Thermal Dynamic Power ; Block Average Toggle Rate (millions of transitions / sec) ;
++----------------------------+-----------------------------------+-----------------------------+--------------------------------+-------------------------------+-----------------------------------------------------------+
+; M9K                        ; 3.20 mW                           ; 2.35 mW                     ; --                             ; 0.85 mW                       ;   46.875                                                  ;
+; Embedded multiplier block  ; 0.21 mW                           ; 0.21 mW                     ; --                             ; 0.00 mW                       ;   55.556                                                  ;
+; Embedded multiplier output ; 0.41 mW                           ; 0.00 mW                     ; --                             ; 0.41 mW                       ;   62.500                                                  ;
+; Combinational cell         ; 2.50 mW                           ; 1.29 mW                     ; --                             ; 1.20 mW                       ;   14.430                                                  ;
+; Clock control block        ; 5.63 mW                           ; 0.00 mW                     ; --                             ; 5.63 mW                       ;  250.000                                                  ;
+; Register cell              ; 6.71 mW                           ; 4.40 mW                     ; --                             ; 2.31 mW                       ;   15.166                                                  ;
+; I/O register               ; 2.14 mW                           ; 2.14 mW                     ; --                             ; 0.00 mW                       ;   24.260                                                  ;
+; I/O                        ; 54.27 mW                          ; 49.09 mW                    ; 2.26 mW                        ; 2.91 mW                       ;   22.340                                                  ;
++----------------------------+-----------------------------------+-----------------------------+--------------------------------+-------------------------------+-----------------------------------------------------------+
+(1) The "Block Thermal Static Power" for all block types except Pins and the Voltage Regulator, if one exists, is part of the "Core Static Thermal Power Dissipation" value found on the PowerPlay Power Analyzer-->Summary report panel. The "Core Static Thermal Power Dissipation" also contains the thermal static power dissipated by the routing.
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Thermal Power Dissipation by Hierarchy                                                                                                                                                                                                                                                               ;
++---------------------------------------------+--------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+-------------------------------------------------------------------------------------------------------+
+; Compilation Hierarchy Node                  ; Total Thermal Power by Hierarchy (1) ; Block Thermal Dynamic Power (1) ; Block Thermal Static Power (1)(2) ; Routing Thermal Dynamic Power (1) ; Full Hierarchy Name                                                                                   ;
++---------------------------------------------+--------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+-------------------------------------------------------------------------------------------------------+
+; |pipemult                                   ; 75.06 mW (67.75 mW)                  ; 59.48 mW (54.70 mW)             ; 2.26 mW (2.26 mW)                 ; 13.31 mW (10.79 mW)               ; |pipemult                                                                                             ;
+;     |hard_block:auto_generated_inst         ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |pipemult|hard_block:auto_generated_inst                                                              ;
+;     |mult:inst                              ; 0.62 mW (0.00 mW)                    ; 0.21 mW (0.00 mW)               ; --                                ; 0.41 mW (0.00 mW)                 ; |pipemult|mult:inst                                                                                   ;
+;         |lpm_mult:lpm_mult_component        ; 0.62 mW (0.00 mW)                    ; 0.21 mW (0.00 mW)               ; --                                ; 0.41 mW (0.00 mW)                 ; |pipemult|mult:inst|lpm_mult:lpm_mult_component                                                       ;
+;             |mult_blo:auto_generated        ; 0.62 mW (0.62 mW)                    ; 0.21 mW (0.21 mW)               ; --                                ; 0.41 mW (0.41 mW)                 ; |pipemult|mult:inst|lpm_mult:lpm_mult_component|mult_blo:auto_generated                               ;
+;     |ram:inst3                              ; 0.24 mW (0.24 mW)                    ; 0.21 mW (0.21 mW)               ; --                                ; 0.03 mW (0.03 mW)                 ; |pipemult|ram:inst3                                                                                   ;
+;         |altsyncram:ram_block_rtl_0         ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |pipemult|ram:inst3|altsyncram:ram_block_rtl_0                                                        ;
+;             |altsyncram_87g1:auto_generated ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |pipemult|ram:inst3|altsyncram:ram_block_rtl_0|altsyncram_87g1:auto_generated                         ;
+;     |Add32:inst4                            ; 0.90 mW (0.00 mW)                    ; 0.22 mW (0.00 mW)               ; --                                ; 0.68 mW (0.00 mW)                 ; |pipemult|Add32:inst4                                                                                 ;
+;         |Add8:inst                          ; 0.25 mW (0.00 mW)                    ; 0.05 mW (0.00 mW)               ; --                                ; 0.20 mW (0.00 mW)                 ; |pipemult|Add32:inst4|Add8:inst                                                                       ;
+;             |Add1:inst                      ; 0.02 mW (0.02 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.01 mW (0.01 mW)                 ; |pipemult|Add32:inst4|Add8:inst|Add1:inst                                                             ;
+;             |Add1:inst1                     ; 0.02 mW (0.02 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.01 mW (0.01 mW)                 ; |pipemult|Add32:inst4|Add8:inst|Add1:inst1                                                            ;
+;             |Add1:inst2                     ; 0.04 mW (0.04 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.03 mW (0.03 mW)                 ; |pipemult|Add32:inst4|Add8:inst|Add1:inst2                                                            ;
+;             |Add1:inst3                     ; 0.04 mW (0.04 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.03 mW (0.03 mW)                 ; |pipemult|Add32:inst4|Add8:inst|Add1:inst3                                                            ;
+;             |Add1:inst4                     ; 0.03 mW (0.03 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.02 mW (0.02 mW)                 ; |pipemult|Add32:inst4|Add8:inst|Add1:inst4                                                            ;
+;             |Add1:inst5                     ; 0.03 mW (0.03 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.02 mW (0.02 mW)                 ; |pipemult|Add32:inst4|Add8:inst|Add1:inst5                                                            ;
+;             |Add1:inst6                     ; 0.04 mW (0.04 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.03 mW (0.03 mW)                 ; |pipemult|Add32:inst4|Add8:inst|Add1:inst6                                                            ;
+;             |Add1:inst7                     ; 0.04 mW (0.04 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.04 mW (0.04 mW)                 ; |pipemult|Add32:inst4|Add8:inst|Add1:inst7                                                            ;
+;         |Add8:inst2                         ; 0.35 mW (0.00 mW)                    ; 0.05 mW (0.00 mW)               ; --                                ; 0.29 mW (0.00 mW)                 ; |pipemult|Add32:inst4|Add8:inst2                                                                      ;
+;             |Add1:inst                      ; 0.06 mW (0.06 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.05 mW (0.05 mW)                 ; |pipemult|Add32:inst4|Add8:inst2|Add1:inst                                                            ;
+;             |Add1:inst1                     ; 0.04 mW (0.04 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.04 mW (0.04 mW)                 ; |pipemult|Add32:inst4|Add8:inst2|Add1:inst1                                                           ;
+;             |Add1:inst2                     ; 0.04 mW (0.04 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.04 mW (0.04 mW)                 ; |pipemult|Add32:inst4|Add8:inst2|Add1:inst2                                                           ;
+;             |Add1:inst3                     ; 0.04 mW (0.04 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.04 mW (0.04 mW)                 ; |pipemult|Add32:inst4|Add8:inst2|Add1:inst3                                                           ;
+;             |Add1:inst4                     ; 0.03 mW (0.03 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.03 mW (0.03 mW)                 ; |pipemult|Add32:inst4|Add8:inst2|Add1:inst4                                                           ;
+;             |Add1:inst5                     ; 0.03 mW (0.03 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.03 mW (0.03 mW)                 ; |pipemult|Add32:inst4|Add8:inst2|Add1:inst5                                                           ;
+;             |Add1:inst6                     ; 0.03 mW (0.03 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.02 mW (0.02 mW)                 ; |pipemult|Add32:inst4|Add8:inst2|Add1:inst6                                                           ;
+;             |Add1:inst7                     ; 0.07 mW (0.07 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.06 mW (0.06 mW)                 ; |pipemult|Add32:inst4|Add8:inst2|Add1:inst7                                                           ;
+;         |Add8:inst3                         ; 0.17 mW (0.00 mW)                    ; 0.06 mW (0.00 mW)               ; --                                ; 0.11 mW (0.00 mW)                 ; |pipemult|Add32:inst4|Add8:inst3                                                                      ;
+;             |Add1:inst                      ; 0.01 mW (0.01 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |pipemult|Add32:inst4|Add8:inst3|Add1:inst                                                            ;
+;             |Add1:inst1                     ; 0.03 mW (0.03 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.03 mW (0.03 mW)                 ; |pipemult|Add32:inst4|Add8:inst3|Add1:inst1                                                           ;
+;             |Add1:inst2                     ; 0.03 mW (0.03 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.02 mW (0.02 mW)                 ; |pipemult|Add32:inst4|Add8:inst3|Add1:inst2                                                           ;
+;             |Add1:inst3                     ; 0.02 mW (0.02 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.02 mW (0.02 mW)                 ; |pipemult|Add32:inst4|Add8:inst3|Add1:inst3                                                           ;
+;             |Add1:inst4                     ; 0.03 mW (0.03 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.02 mW (0.02 mW)                 ; |pipemult|Add32:inst4|Add8:inst3|Add1:inst4                                                           ;
+;             |Add1:inst5                     ; 0.02 mW (0.02 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.01 mW (0.01 mW)                 ; |pipemult|Add32:inst4|Add8:inst3|Add1:inst5                                                           ;
+;             |Add1:inst6                     ; 0.01 mW (0.01 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.01 mW (0.01 mW)                 ; |pipemult|Add32:inst4|Add8:inst3|Add1:inst6                                                           ;
+;             |Add1:inst7                     ; 0.02 mW (0.02 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.01 mW (0.01 mW)                 ; |pipemult|Add32:inst4|Add8:inst3|Add1:inst7                                                           ;
+;         |Add8:inst4                         ; 0.13 mW (0.00 mW)                    ; 0.05 mW (0.00 mW)               ; --                                ; 0.08 mW (0.00 mW)                 ; |pipemult|Add32:inst4|Add8:inst4                                                                      ;
+;             |Add1:inst                      ; 0.02 mW (0.02 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.02 mW (0.02 mW)                 ; |pipemult|Add32:inst4|Add8:inst4|Add1:inst                                                            ;
+;             |Add1:inst1                     ; 0.03 mW (0.03 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.03 mW (0.03 mW)                 ; |pipemult|Add32:inst4|Add8:inst4|Add1:inst1                                                           ;
+;             |Add1:inst2                     ; 0.02 mW (0.02 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.01 mW (0.01 mW)                 ; |pipemult|Add32:inst4|Add8:inst4|Add1:inst2                                                           ;
+;             |Add1:inst3                     ; 0.01 mW (0.01 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |pipemult|Add32:inst4|Add8:inst4|Add1:inst3                                                           ;
+;             |Add1:inst4                     ; 0.01 mW (0.01 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |pipemult|Add32:inst4|Add8:inst4|Add1:inst4                                                           ;
+;             |Add1:inst5                     ; 0.01 mW (0.01 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |pipemult|Add32:inst4|Add8:inst4|Add1:inst5                                                           ;
+;             |Add1:inst6                     ; 0.01 mW (0.01 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |pipemult|Add32:inst4|Add8:inst4|Add1:inst6                                                           ;
+;             |Add1:inst7                     ; 0.02 mW (0.02 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.01 mW (0.01 mW)                 ; |pipemult|Add32:inst4|Add8:inst4|Add1:inst7                                                           ;
+;     |SQRT:inst5                             ; 5.06 mW (0.00 mW)                    ; 3.79 mW (0.00 mW)               ; --                                ; 1.27 mW (0.00 mW)                 ; |pipemult|SQRT:inst5                                                                                  ;
+;         |altsqrt:ALTSQRT_component          ; 5.06 mW (0.10 mW)                    ; 3.79 mW (0.08 mW)               ; --                                ; 1.27 mW (0.02 mW)                 ; |pipemult|SQRT:inst5|altsqrt:ALTSQRT_component                                                        ;
+;             |dffpipe:a_delay                ; 1.93 mW (1.93 mW)                    ; 1.61 mW (1.61 mW)               ; --                                ; 0.32 mW (0.32 mW)                 ; |pipemult|SQRT:inst5|altsqrt:ALTSQRT_component|dffpipe:a_delay                                        ;
+;             |dffpipe:b_dffe[0]              ; 0.01 mW (0.01 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |pipemult|SQRT:inst5|altsqrt:ALTSQRT_component|dffpipe:b_dffe[0]                                      ;
+;             |dffpipe:b_dffe[2]              ; 0.04 mW (0.04 mW)                    ; 0.03 mW (0.03 mW)               ; --                                ; 0.01 mW (0.01 mW)                 ; |pipemult|SQRT:inst5|altsqrt:ALTSQRT_component|dffpipe:b_dffe[2]                                      ;
+;             |dffpipe:b_dffe[4]              ; 0.06 mW (0.06 mW)                    ; 0.04 mW (0.04 mW)               ; --                                ; 0.02 mW (0.02 mW)                 ; |pipemult|SQRT:inst5|altsqrt:ALTSQRT_component|dffpipe:b_dffe[4]                                      ;
+;             |dffpipe:b_dffe[6]              ; 0.07 mW (0.07 mW)                    ; 0.05 mW (0.05 mW)               ; --                                ; 0.02 mW (0.02 mW)                 ; |pipemult|SQRT:inst5|altsqrt:ALTSQRT_component|dffpipe:b_dffe[6]                                      ;
+;             |dffpipe:b_dffe[8]              ; 0.11 mW (0.11 mW)                    ; 0.07 mW (0.07 mW)               ; --                                ; 0.04 mW (0.04 mW)                 ; |pipemult|SQRT:inst5|altsqrt:ALTSQRT_component|dffpipe:b_dffe[8]                                      ;
+;             |dffpipe:b_dffe[10]             ; 0.22 mW (0.22 mW)                    ; 0.16 mW (0.16 mW)               ; --                                ; 0.06 mW (0.06 mW)                 ; |pipemult|SQRT:inst5|altsqrt:ALTSQRT_component|dffpipe:b_dffe[10]                                     ;
+;             |dffpipe:b_dffe[12]             ; 0.25 mW (0.25 mW)                    ; 0.19 mW (0.19 mW)               ; --                                ; 0.07 mW (0.07 mW)                 ; |pipemult|SQRT:inst5|altsqrt:ALTSQRT_component|dffpipe:b_dffe[12]                                     ;
+;             |dffpipe:b_dffe[14]             ; 0.16 mW (0.16 mW)                    ; 0.11 mW (0.11 mW)               ; --                                ; 0.05 mW (0.05 mW)                 ; |pipemult|SQRT:inst5|altsqrt:ALTSQRT_component|dffpipe:b_dffe[14]                                     ;
+;             |dffpipe:r_dffe[0]              ; 0.02 mW (0.02 mW)                    ; 0.02 mW (0.02 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |pipemult|SQRT:inst5|altsqrt:ALTSQRT_component|dffpipe:r_dffe[0]                                      ;
+;             |dffpipe:r_dffe[2]              ; 0.04 mW (0.04 mW)                    ; 0.03 mW (0.03 mW)               ; --                                ; 0.01 mW (0.01 mW)                 ; |pipemult|SQRT:inst5|altsqrt:ALTSQRT_component|dffpipe:r_dffe[2]                                      ;
+;             |dffpipe:r_dffe[4]              ; 0.10 mW (0.10 mW)                    ; 0.08 mW (0.08 mW)               ; --                                ; 0.02 mW (0.02 mW)                 ; |pipemult|SQRT:inst5|altsqrt:ALTSQRT_component|dffpipe:r_dffe[4]                                      ;
+;             |dffpipe:r_dffe[6]              ; 0.14 mW (0.14 mW)                    ; 0.10 mW (0.10 mW)               ; --                                ; 0.04 mW (0.04 mW)                 ; |pipemult|SQRT:inst5|altsqrt:ALTSQRT_component|dffpipe:r_dffe[6]                                      ;
+;             |dffpipe:r_dffe[8]              ; 0.17 mW (0.17 mW)                    ; 0.12 mW (0.12 mW)               ; --                                ; 0.05 mW (0.05 mW)                 ; |pipemult|SQRT:inst5|altsqrt:ALTSQRT_component|dffpipe:r_dffe[8]                                      ;
+;             |dffpipe:r_dffe[10]             ; 0.26 mW (0.26 mW)                    ; 0.18 mW (0.18 mW)               ; --                                ; 0.08 mW (0.08 mW)                 ; |pipemult|SQRT:inst5|altsqrt:ALTSQRT_component|dffpipe:r_dffe[10]                                     ;
+;             |dffpipe:r_dffe[12]             ; 0.32 mW (0.32 mW)                    ; 0.20 mW (0.20 mW)               ; --                                ; 0.12 mW (0.12 mW)                 ; |pipemult|SQRT:inst5|altsqrt:ALTSQRT_component|dffpipe:r_dffe[12]                                     ;
+;             |dffpipe:r_dffe[14]             ; 0.32 mW (0.32 mW)                    ; 0.27 mW (0.27 mW)               ; --                                ; 0.05 mW (0.05 mW)                 ; |pipemult|SQRT:inst5|altsqrt:ALTSQRT_component|dffpipe:r_dffe[14]                                     ;
+;             |lpm_add_sub:subtractors[0]     ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |pipemult|SQRT:inst5|altsqrt:ALTSQRT_component|lpm_add_sub:subtractors[0]                             ;
+;                 |add_sub_u3c:auto_generated ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |pipemult|SQRT:inst5|altsqrt:ALTSQRT_component|lpm_add_sub:subtractors[0]|add_sub_u3c:auto_generated  ;
+;             |lpm_add_sub:subtractors[1]     ; 0.01 mW (0.00 mW)                    ; 0.01 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |pipemult|SQRT:inst5|altsqrt:ALTSQRT_component|lpm_add_sub:subtractors[1]                             ;
+;                 |add_sub_04c:auto_generated ; 0.01 mW (0.01 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |pipemult|SQRT:inst5|altsqrt:ALTSQRT_component|lpm_add_sub:subtractors[1]|add_sub_04c:auto_generated  ;
+;             |lpm_add_sub:subtractors[2]     ; 0.02 mW (0.00 mW)                    ; 0.01 mW (0.00 mW)               ; --                                ; 0.01 mW (0.00 mW)                 ; |pipemult|SQRT:inst5|altsqrt:ALTSQRT_component|lpm_add_sub:subtractors[2]                             ;
+;                 |add_sub_14c:auto_generated ; 0.02 mW (0.02 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.01 mW (0.01 mW)                 ; |pipemult|SQRT:inst5|altsqrt:ALTSQRT_component|lpm_add_sub:subtractors[2]|add_sub_14c:auto_generated  ;
+;             |lpm_add_sub:subtractors[3]     ; 0.02 mW (0.00 mW)                    ; 0.01 mW (0.00 mW)               ; --                                ; 0.01 mW (0.00 mW)                 ; |pipemult|SQRT:inst5|altsqrt:ALTSQRT_component|lpm_add_sub:subtractors[3]                             ;
+;                 |add_sub_24c:auto_generated ; 0.02 mW (0.02 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.01 mW (0.01 mW)                 ; |pipemult|SQRT:inst5|altsqrt:ALTSQRT_component|lpm_add_sub:subtractors[3]|add_sub_24c:auto_generated  ;
+;             |lpm_add_sub:subtractors[4]     ; 0.04 mW (0.00 mW)                    ; 0.02 mW (0.00 mW)               ; --                                ; 0.02 mW (0.00 mW)                 ; |pipemult|SQRT:inst5|altsqrt:ALTSQRT_component|lpm_add_sub:subtractors[4]                             ;
+;                 |add_sub_34c:auto_generated ; 0.04 mW (0.04 mW)                    ; 0.02 mW (0.02 mW)               ; --                                ; 0.02 mW (0.02 mW)                 ; |pipemult|SQRT:inst5|altsqrt:ALTSQRT_component|lpm_add_sub:subtractors[4]|add_sub_34c:auto_generated  ;
+;             |lpm_add_sub:subtractors[5]     ; 0.03 mW (0.00 mW)                    ; 0.02 mW (0.00 mW)               ; --                                ; 0.01 mW (0.00 mW)                 ; |pipemult|SQRT:inst5|altsqrt:ALTSQRT_component|lpm_add_sub:subtractors[5]                             ;
+;                 |add_sub_44c:auto_generated ; 0.03 mW (0.03 mW)                    ; 0.02 mW (0.02 mW)               ; --                                ; 0.01 mW (0.01 mW)                 ; |pipemult|SQRT:inst5|altsqrt:ALTSQRT_component|lpm_add_sub:subtractors[5]|add_sub_44c:auto_generated  ;
+;             |lpm_add_sub:subtractors[6]     ; 0.04 mW (0.00 mW)                    ; 0.02 mW (0.00 mW)               ; --                                ; 0.02 mW (0.00 mW)                 ; |pipemult|SQRT:inst5|altsqrt:ALTSQRT_component|lpm_add_sub:subtractors[6]                             ;
+;                 |add_sub_54c:auto_generated ; 0.04 mW (0.04 mW)                    ; 0.02 mW (0.02 mW)               ; --                                ; 0.02 mW (0.02 mW)                 ; |pipemult|SQRT:inst5|altsqrt:ALTSQRT_component|lpm_add_sub:subtractors[6]|add_sub_54c:auto_generated  ;
+;             |lpm_add_sub:subtractors[7]     ; 0.04 mW (0.00 mW)                    ; 0.03 mW (0.00 mW)               ; --                                ; 0.01 mW (0.00 mW)                 ; |pipemult|SQRT:inst5|altsqrt:ALTSQRT_component|lpm_add_sub:subtractors[7]                             ;
+;                 |add_sub_d5c:auto_generated ; 0.04 mW (0.04 mW)                    ; 0.03 mW (0.03 mW)               ; --                                ; 0.01 mW (0.01 mW)                 ; |pipemult|SQRT:inst5|altsqrt:ALTSQRT_component|lpm_add_sub:subtractors[7]|add_sub_d5c:auto_generated  ;
+;             |lpm_add_sub:subtractors[8]     ; 0.05 mW (0.00 mW)                    ; 0.03 mW (0.00 mW)               ; --                                ; 0.02 mW (0.00 mW)                 ; |pipemult|SQRT:inst5|altsqrt:ALTSQRT_component|lpm_add_sub:subtractors[8]                             ;
+;                 |add_sub_e5c:auto_generated ; 0.05 mW (0.05 mW)                    ; 0.03 mW (0.03 mW)               ; --                                ; 0.02 mW (0.02 mW)                 ; |pipemult|SQRT:inst5|altsqrt:ALTSQRT_component|lpm_add_sub:subtractors[8]|add_sub_e5c:auto_generated  ;
+;             |lpm_add_sub:subtractors[9]     ; 0.05 mW (0.00 mW)                    ; 0.03 mW (0.00 mW)               ; --                                ; 0.02 mW (0.00 mW)                 ; |pipemult|SQRT:inst5|altsqrt:ALTSQRT_component|lpm_add_sub:subtractors[9]                             ;
+;                 |add_sub_f5c:auto_generated ; 0.05 mW (0.05 mW)                    ; 0.03 mW (0.03 mW)               ; --                                ; 0.02 mW (0.02 mW)                 ; |pipemult|SQRT:inst5|altsqrt:ALTSQRT_component|lpm_add_sub:subtractors[9]|add_sub_f5c:auto_generated  ;
+;             |lpm_add_sub:subtractors[10]    ; 0.06 mW (0.00 mW)                    ; 0.04 mW (0.00 mW)               ; --                                ; 0.03 mW (0.00 mW)                 ; |pipemult|SQRT:inst5|altsqrt:ALTSQRT_component|lpm_add_sub:subtractors[10]                            ;
+;                 |add_sub_g5c:auto_generated ; 0.06 mW (0.06 mW)                    ; 0.04 mW (0.04 mW)               ; --                                ; 0.03 mW (0.03 mW)                 ; |pipemult|SQRT:inst5|altsqrt:ALTSQRT_component|lpm_add_sub:subtractors[10]|add_sub_g5c:auto_generated ;
+;             |lpm_add_sub:subtractors[11]    ; 0.06 mW (0.00 mW)                    ; 0.04 mW (0.00 mW)               ; --                                ; 0.02 mW (0.00 mW)                 ; |pipemult|SQRT:inst5|altsqrt:ALTSQRT_component|lpm_add_sub:subtractors[11]                            ;
+;                 |add_sub_h5c:auto_generated ; 0.06 mW (0.06 mW)                    ; 0.04 mW (0.04 mW)               ; --                                ; 0.02 mW (0.02 mW)                 ; |pipemult|SQRT:inst5|altsqrt:ALTSQRT_component|lpm_add_sub:subtractors[11]|add_sub_h5c:auto_generated ;
+;             |lpm_add_sub:subtractors[12]    ; 0.08 mW (0.00 mW)                    ; 0.05 mW (0.00 mW)               ; --                                ; 0.04 mW (0.00 mW)                 ; |pipemult|SQRT:inst5|altsqrt:ALTSQRT_component|lpm_add_sub:subtractors[12]                            ;
+;                 |add_sub_i5c:auto_generated ; 0.08 mW (0.08 mW)                    ; 0.05 mW (0.05 mW)               ; --                                ; 0.04 mW (0.04 mW)                 ; |pipemult|SQRT:inst5|altsqrt:ALTSQRT_component|lpm_add_sub:subtractors[12]|add_sub_i5c:auto_generated ;
+;             |lpm_add_sub:subtractors[13]    ; 0.09 mW (0.00 mW)                    ; 0.05 mW (0.00 mW)               ; --                                ; 0.04 mW (0.00 mW)                 ; |pipemult|SQRT:inst5|altsqrt:ALTSQRT_component|lpm_add_sub:subtractors[13]                            ;
+;                 |add_sub_j5c:auto_generated ; 0.09 mW (0.09 mW)                    ; 0.05 mW (0.05 mW)               ; --                                ; 0.04 mW (0.04 mW)                 ; |pipemult|SQRT:inst5|altsqrt:ALTSQRT_component|lpm_add_sub:subtractors[13]|add_sub_j5c:auto_generated ;
+;             |lpm_add_sub:subtractors[14]    ; 0.09 mW (0.00 mW)                    ; 0.05 mW (0.00 mW)               ; --                                ; 0.04 mW (0.00 mW)                 ; |pipemult|SQRT:inst5|altsqrt:ALTSQRT_component|lpm_add_sub:subtractors[14]                            ;
+;                 |add_sub_k5c:auto_generated ; 0.09 mW (0.09 mW)                    ; 0.05 mW (0.05 mW)               ; --                                ; 0.04 mW (0.04 mW)                 ; |pipemult|SQRT:inst5|altsqrt:ALTSQRT_component|lpm_add_sub:subtractors[14]|add_sub_k5c:auto_generated ;
+;             |lpm_add_sub:subtractors[15]    ; 0.03 mW (0.00 mW)                    ; 0.03 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |pipemult|SQRT:inst5|altsqrt:ALTSQRT_component|lpm_add_sub:subtractors[15]                            ;
+;                 |add_sub_l5c:auto_generated ; 0.03 mW (0.03 mW)                    ; 0.03 mW (0.03 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |pipemult|SQRT:inst5|altsqrt:ALTSQRT_component|lpm_add_sub:subtractors[15]|add_sub_l5c:auto_generated ;
+;     |Binary_Comparator:inst6                ; 0.21 mW (0.21 mW)                    ; 0.19 mW (0.19 mW)               ; --                                ; 0.02 mW (0.02 mW)                 ; |pipemult|Binary_Comparator:inst6                                                                     ;
+;     |MUX4X:inst10                           ; 0.27 mW (0.27 mW)                    ; 0.16 mW (0.16 mW)               ; --                                ; 0.11 mW (0.11 mW)                 ; |pipemult|MUX4X:inst10                                                                                ;
++---------------------------------------------+--------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+-------------------------------------------------------------------------------------------------------+
+(1) Value in parentheses is the power consumed at that level of hierarchy. Value not in parentheses is the power consumed at that level of hierarchy plus the power consumed by all levels of hierarchy below it.
+
+(2) The "Block Thermal Static Power" for all levels of hierarchy except the top-level hierarchy is part of the "Core Static Thermal Power Dissipation" value found on the PowerPlay Power Analyzer-->Summary report panel. The "Core Static Thermal Power Dissipation" also contains the thermal static power dissipated by the routing.
+
+
++--------------------------------------------------------------------+
+; Core Dynamic Thermal Power Dissipation by Clock Domain             ;
++-----------------+-----------------------+--------------------------+
+; Clock Domain    ; Clock Frequency (MHz) ; Total Core Dynamic Power ;
++-----------------+-----------------------+--------------------------+
+; clk1            ; 125.00                ; 23.49                    ;
+; No clock domain ; 0.00                  ; 0.21                     ;
++-----------------+-----------------------+--------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Current Drawn from Voltage Supplies Summary                                                                                        ;
++----------------+-------------------------+---------------------------+--------------------------+----------------------------------+
+; Voltage Supply ; Total Current Drawn (1) ; Dynamic Current Drawn (1) ; Static Current Drawn (1) ; Minimum Power Supply Current (2) ;
++----------------+-------------------------+---------------------------+--------------------------+----------------------------------+
+; VCC            ; 24.99 mA                ; 20.99 mA                  ; 4.00 mA                  ; 24.99 mA                         ;
+; VCCIO          ; 23.11 mA                ; 18.54 mA                  ; 4.57 mA                  ; 23.11 mA                         ;
+; VCCA           ; 12.00 mA                ; 0.00 mA                   ; 12.00 mA                 ; 12.00 mA                         ;
+; VCCD_PLL       ; 4.11 mA                 ; 0.00 mA                   ; 4.11 mA                  ; 4.11 mA                          ;
+; VCCINT         ; 0.08 mA                 ; 0.00 mA                   ; 0.08 mA                  ; 0.08 mA                          ;
+; VCCA_ADC       ; 0.00 mA                 ; 0.00 mA                   ; 0.00 mA                  ; 0.00 mA                          ;
++----------------+-------------------------+---------------------------+--------------------------+----------------------------------+
+(1) Currents reported in columns "Total Current Drawn", "Dynamic Current Drawn", and "Static Current Drawn" are sufficient for user operation of the device.  
+(2) Currents reported in column "Minimum Power Supply Current" are sufficient for power-up, configuration, and user operation of the device.
+
+
++-----------------------------------------------------------------------------------------------+
+; VCCIO Supply Current Drawn by I/O Bank                                                        ;
++----------+---------------+---------------------+-----------------------+----------------------+
+; I/O Bank ; VCCIO Voltage ; Total Current Drawn ; Dynamic Current Drawn ; Static Current Drawn ;
++----------+---------------+---------------------+-----------------------+----------------------+
+; 1A       ; 2.5V          ; 0.25 mA             ; 0.00 mA               ; 0.25 mA              ;
+; 1B       ; 2.5V          ; 0.26 mA             ; 0.00 mA               ; 0.26 mA              ;
+; 2        ; 2.5V          ; 0.25 mA             ; 0.00 mA               ; 0.25 mA              ;
+; 3        ; 2.5V          ; 8.45 mA             ; 8.10 mA               ; 0.35 mA              ;
+; 4        ; 2.5V          ; 6.12 mA             ; 5.82 mA               ; 0.30 mA              ;
+; 5        ; 2.5V          ; 0.52 mA             ; 0.21 mA               ; 0.31 mA              ;
+; 6        ; 2.5V          ; 1.00 mA             ; 0.64 mA               ; 0.36 mA              ;
+; 7        ; 2.5V          ; 3.40 mA             ; 3.09 mA               ; 0.31 mA              ;
+; 8        ; 3.3V          ; 2.87 mA             ; 0.69 mA               ; 2.18 mA              ;
++----------+---------------+---------------------+-----------------------+----------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; VCCIO Supply Current Drawn by Voltage                                                                                             ;
++---------------+-------------------------+---------------------------+--------------------------+----------------------------------+
+; VCCIO Voltage ; Total Current Drawn (1) ; Dynamic Current Drawn (1) ; Static Current Drawn (1) ; Minimum Power Supply Current (2) ;
++---------------+-------------------------+---------------------------+--------------------------+----------------------------------+
+; 2.5V          ; 20.25 mA                ; 17.85 mA                  ; 2.39 mA                  ; 20.25 mA                         ;
+; 3.3V          ; 2.87 mA                 ; 0.69 mA                   ; 2.18 mA                  ; 2.87 mA                          ;
++---------------+-------------------------+---------------------------+--------------------------+----------------------------------+
+(1) Currents reported in columns "Total Current Drawn", "Dynamic Current Drawn", and "Static Current Drawn" are sufficient for user operation of the device.  
+(2) Currents reported in column "Minimum Power Supply Current" are sufficient for power-up, configuration, and user operation of the device.
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Confidence Metric Details                                                                                                                          ;
++----------------------------------------------------------------------------------------+--------------+-------------+--------------+---------------+
+; Data Source                                                                            ; Total        ; Pin         ; Registered   ; Combinational ;
++----------------------------------------------------------------------------------------+--------------+-------------+--------------+---------------+
+; Simulation (from file)                                                                 ;              ;             ;              ;               ;
+;     -- Number of signals with Toggle Rate from Simulation                              ; 0 (0.0%)     ; 0 (0.0%)    ; 0 (0.0%)     ; 0 (0.0%)      ;
+;     -- Number of signals with Static Probability from Simulation                       ; 0 (0.0%)     ; 0 (0.0%)    ; 0 (0.0%)     ; 0 (0.0%)      ;
+;                                                                                        ;              ;             ;              ;               ;
+; Node, entity or clock assignment                                                       ;              ;             ;              ;               ;
+;     -- Number of signals with Toggle Rate from Node, entity or clock assignment        ; 2 (0.1%)     ; 1 (0.6%)    ; 0 (0.0%)     ; 1 (0.1%)      ;
+;     -- Number of signals with Static Probability from Node, entity or clock assignment ; 2 (0.1%)     ; 1 (0.6%)    ; 0 (0.0%)     ; 1 (0.1%)      ;
+;                                                                                        ;              ;             ;              ;               ;
+; Vectorless estimation                                                                  ;              ;             ;              ;               ;
+;     -- Number of signals with Toggle Rate from Vectorless estimation                   ; 1407 (93.2%) ; 73 (41.7%)  ; 407 (100.0%) ; 927 (99.9%)   ;
+;     -- Number of signals with Zero toggle rate, from Vectorless estimation             ; 12 (0.8%)    ; 3 (1.7%)    ; 2 (0.5%)     ; 7 (0.8%)      ;
+;     -- Number of signals with Static Probability from Vectorless estimation            ; 1407 (93.2%) ; 73 (41.7%)  ; 407 (100.0%) ; 927 (99.9%)   ;
+;                                                                                        ;              ;             ;              ;               ;
+; Default assignment                                                                     ;              ;             ;              ;               ;
+;     -- Number of signals with Toggle Rate from Default assignment                      ; 94 (6.2%)    ; 94 (53.7%)  ; 0 (0.0%)     ; 0 (0.0%)      ;
+;     -- Number of signals with Static Probability from Default assignment               ; 101 (6.7%)   ; 101 (57.7%) ; 0 (0.0%)     ; 0 (0.0%)      ;
+;                                                                                        ;              ;             ;              ;               ;
+; Assumed 0                                                                              ;              ;             ;              ;               ;
+;     -- Number of signals with Toggle Rate assumed 0                                    ; 7 (0.5%)     ; 7 (4.0%)    ; 0 (0.0%)     ; 0 (0.0%)      ;
++----------------------------------------------------------------------------------------+--------------+-------------+--------------+---------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Activities                                                                                                                           ;
++--------+------+---------------------------------------------+-------------------------+--------------------+--------------------------------+
+; Signal ; Type ; Toggle Rate (millions of transitions / sec) ; Toggle Rate Data Source ; Static Probability ; Static Probability Data Source ;
++--------+------+---------------------------------------------+-------------------------+--------------------+--------------------------------+
+(1) The "Signal Activity" Table has been hidden. To show this table, please select the "Write signal activities to report file" option under "PowerPlay Power Analyzer Settings".
+
+
++-------------------------+
+; Power Analyzer Messages ;
++-------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Power Analyzer
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Sat Nov 03 18:33:24 2018
+Info: Command: quartus_pow --read_settings_files=off --write_settings_files=off pipemult -c pipemult
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Info (332104): Reading SDC File: 'pipemult.sdc'
+Info (223000): Starting Vectorless Power Activity Estimation
+Warning (222013): Relative toggle rates could not be calculated because no clock domain could be identified for some nodes
+Info (223001): Completed Vectorless Power Activity Estimation
+Info (218000): Using Advanced I/O Power to simulate I/O buffers with the specified board trace model
+Info (334003): Started post-fitting delay annotation
+Warning (334000): Timing characteristics of device 10M08DAF484C8GES are preliminary
+Info (334004): Delay annotation completed successfully
+Info (215049): Average toggle rate for this design is 17.510 millions of transitions / sec
+Info (215031): Total thermal power estimate for the design is 125.16 mW
+Info: Quartus Prime Power Analyzer was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 4841 megabytes
+    Info: Processing ended: Sat Nov 03 18:33:33 2018
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:10
+
+

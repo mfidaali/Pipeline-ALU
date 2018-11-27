@@ -1,0 +1,9 @@
+PIPELINE=8
+Q_PORT_WIDTH=16
+R_PORT_WIDTH=17
+WIDTH=32
+DEVICE_FAMILY="MAX 10"
+clk
+radical
+q
+remainder

@@ -1,0 +1,93 @@
+# Copyright (C) 2018  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details.
+
+# Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+# File: C:\Users\mfida\OneDrive\Documents\Altera\projects\CourseraCourseProj\pipemultQP16_1\Schematic\pipemult_assignments.csv
+# Generated on: Sat Nov 03 12:27:47 2018
+
+Status,From,To,Assignment Name,Value,Enabled,Entity,Comment,Tag
+Ok,,clk1,Location,PIN_N14,Yes,,,
+Ok,,clk1,I/O Standard,3.3-V LVCMOS,Yes,pipemult,,
+Ok,,reset,Location,PIN_D9,Yes,,,
+Ok,,reset,I/O Standard,3.3-V LVCMOS,Yes,pipemult,,
+Ok,,A,I/O Standard,3.3-V LVCMOS,Yes,pipemult,,
+Ok,,A[31],I/O Standard,3.3-V LVCMOS,Yes,pipemult,,
+Ok,,A[30],I/O Standard,3.3-V LVCMOS,Yes,pipemult,,
+Ok,,A[29],I/O Standard,3.3-V LVCMOS,Yes,pipemult,,
+Ok,,A[28],I/O Standard,3.3-V LVCMOS,Yes,pipemult,,
+Ok,,A[27],I/O Standard,3.3-V LVCMOS,Yes,pipemult,,
+Ok,,A[26],I/O Standard,3.3-V LVCMOS,Yes,pipemult,,
+Ok,,A[25],I/O Standard,3.3-V LVCMOS,Yes,pipemult,,
+Ok,,A[24],I/O Standard,3.3-V LVCMOS,Yes,pipemult,,
+Ok,,A[23],I/O Standard,3.3-V LVCMOS,Yes,pipemult,,
+Ok,,A[22],I/O Standard,3.3-V LVCMOS,Yes,pipemult,,
+Ok,,A[21],I/O Standard,3.3-V LVCMOS,Yes,pipemult,,
+Ok,,A[20],I/O Standard,3.3-V LVCMOS,Yes,pipemult,,
+Ok,,A[19],I/O Standard,3.3-V LVCMOS,Yes,pipemult,,
+Ok,,A[18],I/O Standard,3.3-V LVCMOS,Yes,pipemult,,
+Ok,,A[17],I/O Standard,3.3-V LVCMOS,Yes,pipemult,,
+Ok,,A[16],I/O Standard,3.3-V LVCMOS,Yes,pipemult,,
+Ok,,A[15],I/O Standard,3.3-V LVCMOS,Yes,pipemult,,
+Ok,,A[14],I/O Standard,3.3-V LVCMOS,Yes,pipemult,,
+Ok,,A[13],I/O Standard,3.3-V LVCMOS,Yes,pipemult,,
+Ok,,A[12],I/O Standard,3.3-V LVCMOS,Yes,pipemult,,
+Ok,,A[11],I/O Standard,3.3-V LVCMOS,Yes,pipemult,,
+Ok,,A[10],I/O Standard,3.3-V LVCMOS,Yes,pipemult,,
+Ok,,A[9],I/O Standard,3.3-V LVCMOS,Yes,pipemult,,
+Ok,,A[8],I/O Standard,3.3-V LVCMOS,Yes,pipemult,,
+Ok,,A[7],I/O Standard,3.3-V LVCMOS,Yes,pipemult,,
+Ok,,A[6],I/O Standard,3.3-V LVCMOS,Yes,pipemult,,
+Ok,,A[5],I/O Standard,3.3-V LVCMOS,Yes,pipemult,,
+Ok,,A[4],I/O Standard,3.3-V LVCMOS,Yes,pipemult,,
+Ok,,A[3],I/O Standard,3.3-V LVCMOS,Yes,pipemult,,
+Ok,,A[2],I/O Standard,3.3-V LVCMOS,Yes,pipemult,,
+Ok,,A[1],I/O Standard,3.3-V LVCMOS,Yes,pipemult,,
+Ok,,A[0],I/O Standard,3.3-V LVCMOS,Yes,pipemult,,
+Ok,,A,Location,IOBANK_8,Yes,,,
+Ok,,ALUout,Location,IOBANK_7,Yes,,,
+Ok,,B,Location,IOBANK_6,Yes,,,
+Ok,,CCout,Location,IOBANK_7,Yes,,,
+Ok,,dataa,Location,IOBANK_5,Yes,,,
+Ok,,IR,Location,IOBANK_6,Yes,,,
+Ok,,datab,Location,IOBANK_5,Yes,,,
+Ok,,CCout[5],Location,IOBANK_7,Yes,,,
+Ok,,CCout[4],Location,IOBANK_7,Yes,,,
+Ok,,CCout[3],Location,IOBANK_7,Yes,,,
+Ok,,CCout[2],Location,IOBANK_7,Yes,,,
+Ok,,CCout[1],Location,IOBANK_7,Yes,,,
+Ok,,CCout[0],Location,IOBANK_7,Yes,,,
+Ok,,Sum,Location,IOBANK_3,Yes,,,
+Ok,,ALUout[15],Location,IOBANK_7,Yes,,,
+Ok,,ALUout[14],Location,IOBANK_7,Yes,,,
+Ok,,ALUout[13],Location,IOBANK_7,Yes,,,
+Ok,,ALUout[12],Location,IOBANK_7,Yes,,,
+Ok,,ALUout[11],Location,IOBANK_7,Yes,,,
+Ok,,ALUout[10],Location,IOBANK_7,Yes,,,
+Ok,,ALUout[9],Location,IOBANK_7,Yes,,,
+Ok,,ALUout[8],Location,IOBANK_7,Yes,,,
+Ok,,ALUout[7],Location,IOBANK_7,Yes,,,
+Ok,,ALUout[6],Location,IOBANK_7,Yes,,,
+Ok,,ALUout[5],Location,IOBANK_7,Yes,,,
+Ok,,ALUout[4],Location,IOBANK_7,Yes,,,
+Ok,,ALUout[3],Location,IOBANK_7,Yes,,,
+Ok,,ALUout[2],Location,IOBANK_7,Yes,,,
+Ok,,ALUout[1],Location,IOBANK_7,Yes,,,
+Ok,,ALUout[0],Location,IOBANK_7,Yes,,,
+Ok,,q,Location,IOBANK_4,Yes,,,
+Ok,,wraddress,Location,IOBANK_5,Yes,,,
+Ok,,rdaddress,Location,IOBANK_5,Yes,,,
+Ok,,wren,Location,IOBANK_5,Yes,,,
+Ok,,Cin,Location,IOBANK_3,Yes,,,
+Ok,,Cout,Location,IOBANK_3,Yes,,,
+,<<new>>,<<new>>,<<new>>,,,,,
